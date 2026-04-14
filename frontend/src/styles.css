@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #08141f;
+  --surface: rgba(16, 32, 48, 0.65);
+  --surface-strong: rgba(22, 40, 60, 0.9);
+  --border: rgba(255, 255, 255, 0.18);
+  --text: #f6fbff;
+  --muted: #b4c6d5;
+  --accent: #38bdf8;
+  --accent-2: #34d399;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.2), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(52, 211, 153, 0.2), transparent 35%),
+    linear-gradient(140deg, #08141f 0%, #091d2e 50%, #0e2539 100%);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.glass {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 40px rgba(1, 8, 14, 0.25);
+}
+
+.animate-rise {
+  animation: rise 380ms ease-out;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 0.8rem;
+  background: rgba(4, 12, 20, 0.6);
+  color: var(--text);
+  padding: 0.62rem 0.75rem;
+}
+
+.btn-primary {
+  border: 0;
+  border-radius: 0.8rem;
+  padding: 0.68rem 0.92rem;
+  color: #002234;
+  font-weight: 700;
+  background: linear-gradient(120deg, var(--accent) 0%, var(--accent-2) 100%);
+  cursor: pointer;
+}
+
+.btn-ghost {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.8rem;
+  padding: 0.6rem 0.88rem;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+}
